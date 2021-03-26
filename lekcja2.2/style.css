@@ -1,0 +1,47 @@
+html {
+   font-size: 18px;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+header {
+   display: flex;
+   justify-content: flex-end;
+   padding: 10px;
+}
+
+.logo {   
+   height: 200px;
+   width: 500px;
+   background-image: url('logo.jpg');
+   background-repeat: no-repeat;
+}
+
+nav {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+h2 {
+   font-size: 2rem;
+
+}
+.absolute .one{
+   font-size: 5in;
+}
+.absolute .two{
+   font-size: 5cm;
+}
+.absolute .three{
+   font-size: 5pc;
+}
+.absolute .four{
+   font-size: 5mm;
+}
+.absolute .five{
+   font-size: 5px;
+}
