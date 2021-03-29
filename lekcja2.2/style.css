@@ -23,6 +23,14 @@ header {
    background-repeat: no-repeat;
 }
 
+.logo:hover {
+   background-position: 0 -200px ;
+}
+
+.logo:active {
+   background-position: 0 -400px ;
+
+}
 nav {
    display: flex;
    justify-content: space-evenly;
