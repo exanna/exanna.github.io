@@ -6,6 +6,7 @@
 
 body {
    font-family: arial;
+   cursor: default;
 }
 
 .wrapper {
@@ -22,7 +23,9 @@ h1 {
    text-align: center;
    margin-top: 50px;
    margin-bottom: 5%;
-   font-size: 60px;
+   font-size: 50px;
+   text-transform: uppercase;
+   letter-spacing: 3px;
 }
 .grid {
    display: grid;
@@ -34,7 +37,6 @@ h1 {
 }
 
 .grid > a {
-   border: 2px solid black; 
    border-radius: 15px;  
    display: flex;
    flex-direction: column;
@@ -43,12 +45,12 @@ h1 {
    min-width: 20vw;
    cursor: pointer;
    padding: 60px;
+   background-color: rgb(80, 129, 235);
 }
 
 .grid > a:hover {
-   background-color: rgb(163, 154, 154);
+   background-color: rgb(224, 82, 82);
    transition: background-color .3s;
-   border: none;
 }
 
 .grid > a:hover i,
@@ -80,19 +82,19 @@ p {
 .projects {
    grid-area: projects;
    min-height: 40vh;
-   animation: move  .8s linear .3s 1;
+   animation: move  .6s ease-out .3s 1;
    background-color: white;
    z-index: 1;
 }
 
 footer {
-   padding: 20px;
+   padding: 40px;
    
 }
 
 @media (max-width:760px){
    h1 {
-      font-size: 40px;
+      font-size: 30px;
    }
    .grid{
      grid-template-areas: 
@@ -101,6 +103,10 @@ footer {
      "github"
      "mail"
      "projects";
+   }
+
+   .grid > a {      
+      min-width: 80vw;      
    }
    
 }
