@@ -1,0 +1,127 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: arial;
+}
+
+.wrapper {
+   min-width: 100vw;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+h1 {
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 5%;
+   font-size: 60px;
+}
+.grid {
+   display: grid;
+   grid-template-areas: 
+      "about info projects"
+      "github mail projects";
+   grid-gap: 30px;
+      
+}
+
+.grid > a {
+   border: 2px solid black; 
+   border-radius: 15px;  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-width: 20vw;
+   cursor: pointer;
+   padding: 60px;
+}
+
+.grid > a:hover {
+   background-color: rgb(163, 154, 154);
+   transition: background-color .3s;
+   border: none;
+}
+
+.grid > a:hover i,
+.grid > a:hover p {
+   color: white;
+   transition: color .2s;
+}
+
+i {
+   font-size: 80px;
+}
+
+p {
+   font-size: 30px;
+}
+
+.about {
+   grid-area: about;
+}
+.info {
+   grid-area: info;
+}
+.github {
+   grid-area: github;
+}
+.mail {
+   grid-area: mail;
+}
+.projects {
+   grid-area: projects;
+   min-height: 40vh;
+   animation: move  .8s linear .3s 1;
+   background-color: white;
+   z-index: 1;
+}
+
+footer {
+   padding: 20px;
+   
+}
+
+@media (max-width:760px){
+   h1 {
+      font-size: 40px;
+   }
+   .grid{
+     grid-template-areas: 
+     "about"
+     "info"
+     "github"
+     "mail"
+     "projects";
+   }
+   
+}
+
+@keyframes move{
+   0% {
+      transform: translateY(-400px);
+   }
+
+   25% {
+      transform: translateY(-200px);
+   }
+
+   50% {
+      transform: translateY(0);
+   }
+
+   75% {
+      transform: translateY(-50px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
