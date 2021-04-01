@@ -40,7 +40,7 @@ body {
 
 .row {
    @extend %flex-centered;
-   padding: 0 5%;
+   padding: 5%;
 
    &__text {
       @extend %flex-centered;
