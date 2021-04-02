@@ -1,0 +1,18 @@
+/* właściwości rodzica */ 
+
+* {
+   display: flex; /* wiadomo */
+   flex-direction: row; /* row | row-reverse | column | column-reverse - odwraca flexa poziomo np */
+   flex-wrap: nowrap; /* nowrap | wrap | wrap-reverse - pozwala przeskoczyć dzieciom, które się nie mieszczą*/
+   justify-content: flex-start; /* flex-start | flex-end | center | space-between | space-around | space-evenly - ustawia przestrzenie (gry flex-direction: row to w poziomie)*/
+   align-items: stretch; /* stretch | flex-start | flex-end | center - ustawia przestrzenie (gdy direction row to w pionie) */
+   align-content: flex-start; /* flex-start | flex-end | center | space-between | space-around | space-evenly - ustawia przestrzenie gdy flex ma kilka wierszy i kolumn */
+}
+
+/* właściwości dziecka */
+
+* {
+   flex-grow: 4; /* domyślnie 0 - na ile dziecko ma urosnąć względem innych dzieci  */
+   flex-basis:  auto; /* 300px | 30vw - przy flex-direction: row - szerokość dziecka, przy column - wysokość */
+   align-self: auto; /* auto | flex-start | flex-end | center | baseline | stretch - wsłasne ustawienie dziecka w rodzicu (inne niż nadał rodzic) */
+}
